@@ -1,3 +1,5 @@
+// Utilities
+@use "./colors";
 @use "./fonts";
 
 // Base styles
@@ -11,5 +13,7 @@
 }
 
 body {
+    background-color: colors.$Very-Light-Gray;
+
     font-family: fonts.$Josefin-Sans;
 }
