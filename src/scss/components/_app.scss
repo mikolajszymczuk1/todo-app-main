@@ -19,6 +19,12 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+
+        @media screen and (min-width: 600px) {
+            height: 300px;
+
+            background-image: url("/src/images/bg-desktop-light.jpg");
+        }
     }
 
     // Main app content
@@ -26,6 +32,21 @@
         position: relative;
 
         padding: 25px;
+
+        @media screen and (min-width: 600px) {
+            padding: 0;
+            margin: 0 auto;
+
+            width: 80%;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: 60%;
+        }
+
+        @media screen and (min-width: 1440px) {
+            width: 540px;
+        }
     }
 
     // App header
@@ -36,12 +57,20 @@
 
         padding: 20px 0;
         margin-bottom: 15px;
+    
+        @media screen and (min-width: 600px) {
+            margin: 60px 0 18px 0;
+        }
     }
 
     &__title {
         font-size: 1.8em;
         letter-spacing: 10px;
         color: white;
+
+        @media screen and (min-width: 600px) {
+            font-size: 2.5em;
+        }
     }
 
     &__theme-changer {
@@ -53,6 +82,11 @@
         border: none;
         outline: none;
         background-color: transparent;
+
+        @media screen and (min-width: 600px) {
+            width: 25px;
+            height: 25px;
+        }
 
         &--active {
             #{ $self }__theme-icon:nth-child(1) {
@@ -95,6 +129,11 @@
 
         background-color: white;
         border-radius: 5px;
+
+        @media screen and (min-width: 600px) {
+            padding: 17px 20px;
+            margin-bottom: 24px;
+        }
     }
 
     &__new-todo-name {
@@ -112,11 +151,21 @@
         color: colors.$Very-Dark-Grayish-Blue;
         font-family: fonts.$Josefin-Sans;
 
+        @media screen and (min-width: 600px) {
+            height: 30px;
+
+            font-size: 1.2em;
+        }
+
         &::placeholder {
             font-family: fonts.$Josefin-Sans;
             color: colors.$Dark-Grayish-Blue-a;
             font-size: 0.9em;
             font-weight: 400;
+
+            @media screen and (min-width: 600px) {
+                font-size: 1em;
+            }
         }
     }
 
@@ -127,6 +176,10 @@
         border-radius: 5px;
         overflow: hidden;
         box-shadow: 0 10px 16px rgba(colors.$Very-Dark-Grayish-Blue, 0.15);
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 0;
+        }
     }
 
     // Todos container
@@ -141,12 +194,20 @@
         padding: 20px;
 
         background-color: white;
+
+        @media screen and (min-width: 600px) {
+            padding: 18px 20px;
+        }
     }
 
     &__items-left-text {
         color: colors.$Dark-Grayish-Blue-a;
         font-size: 0.75em;
         font-weight: 400;
+
+        @media screen and (min-width: 600px) {
+            font-size: 0.8em;
+        }
     }
 
     &__clear-completed-button {
@@ -157,6 +218,10 @@
         color: colors.$Dark-Grayish-Blue-a;
         font-family: fonts.$Josefin-Sans;
         font-size: 0.75em;
+
+        @media screen and (min-width: 600px) {
+            font-size: 0.8em;
+        }
     }
 
     // Filtering tools
@@ -171,6 +236,15 @@
         background-color: white;
         border-radius: 5px;
         box-shadow: 0 5px 20px rgba(colors.$Very-Dark-Grayish-Blue, 0.05);
+
+        @media screen and (min-width: 1024px) {
+            margin: 0 auto 5px auto;
+
+            width: 250px;
+
+            transform: translateY(-100%);
+            box-shadow: none;
+        }
     }
 
     &__tool {
