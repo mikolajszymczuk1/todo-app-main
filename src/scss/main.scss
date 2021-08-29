@@ -1,2 +1,13 @@
 // Base styles
 @use "./utilities/base";
+
+// Components
+
+// -- App component
+@use "./components/app";
+
+// -- Iscomplete checkbox component
+@use "./components/iscomplete";
+
+// -- Todo component
+@use "./components/todo";
