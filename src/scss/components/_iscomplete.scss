@@ -1,0 +1,42 @@
+// Utilities
+@use "../utilities/colors";
+
+// Styles for iscomplete component
+.iscomplete {
+    $self: &;
+
+    &__label {
+        display: block;
+    }
+
+    &__checkbox {
+        display: none;
+
+        &:checked {
+            ~ #{ $self }__custom-checkbox {
+                border: none;
+                background: linear-gradient(colors.$Check-Background-a, colors.$Check-Background-b);
+            }
+        }
+    }
+
+    &__custom-checkbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-right: 10px;
+
+        width: 20px;
+        height: 20px;
+
+        background-color: white;
+        border: solid 1px colors.$Very-Light-Grayish-Blue;
+        border-radius: 50%;
+    }
+
+    &__custom-checkbox-icon {
+        width: 50%;
+        height: 50%;
+    }
+}
