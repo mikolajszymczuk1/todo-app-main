@@ -11,17 +11,33 @@
     padding: 16px 20px;
 
     background-color: white;
+    transition: background-color 150ms ease-out;
     border-bottom: solid 1px colors.$Very-Light-Grayish-Blue;
 
     @media screen and (min-width: 600px) {
         padding: 19.5px 20px;
     }
 
+    &:hover {
+        #{ $self }__delete-button {
+            opacity: 1;
+        }
+    }
+
     &--completed {
         #{ $self }__text {
             text-decoration: line-through;
             color: colors.$Light-Grayish-Blue-a;
+
+            .body--dark & {
+                color: colors.$Very-Dark-Grayish-Blue-a;
+            }
         }
+    }
+
+    .body--dark & {
+        background-color: colors.$Very-Dark-Desaturated-Blue;
+        border-color: colors.$Very-Dark-Grayish-Blue-b;
     }
 
     &__text {
@@ -36,6 +52,10 @@
         @media screen and (min-width: 600px) {
             font-size: 1.2em;
         }
+
+        .body--dark & {
+            color: colors.$Light-Grayish-Blue-b;
+        }
     }
 
     &__delete-button {
@@ -47,7 +67,21 @@
         height: 12px;
 
         border: none;
+        transition: opacity 200ms ease-out;
         background-color: transparent;
+
+        @media screen and (min-width: 600px) {
+            width: 18px;
+            height: 18px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            opacity: 0;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__delete-icon {

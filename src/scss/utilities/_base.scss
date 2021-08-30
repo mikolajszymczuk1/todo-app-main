@@ -12,8 +12,13 @@
     box-sizing: border-box;
 }
 
-body {
+.body {
     background-color: colors.$Very-Light-Gray;
+    transition: background-color 150ms ease-out;
 
     font-family: fonts.$Josefin-Sans;
+
+    &--dark {
+        background-color: colors.$Very-Dark-Blue;
+    }
 }

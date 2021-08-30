@@ -19,11 +19,20 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        transition: background-image 300ms ease-out;
 
         @media screen and (min-width: 600px) {
             height: 300px;
 
             background-image: url("/src/images/bg-desktop-light.jpg");
+        }
+
+        #{ $self }--dark & {
+            background-image: url("/src/images/bg-mobile-dark.jpg");
+
+            @media screen and (min-width: 600px) {
+                background-image: url("/src/images/bg-desktop-dark.jpg");
+            }
         }
     }
 
@@ -128,11 +137,16 @@
         margin-bottom: 15px;
 
         background-color: white;
+        transition: background-color 150ms ease-out;
         border-radius: 5px;
 
         @media screen and (min-width: 600px) {
             padding: 17px 20px;
             margin-bottom: 24px;
+        }
+
+        #{ $self }--dark & {
+            background-color: colors.$Very-Dark-Desaturated-Blue;
         }
     }
 
@@ -147,6 +161,7 @@
 
         border: none;
         outline: none;
+        transition: background-color 150ms ease-out;
 
         color: colors.$Very-Dark-Grayish-Blue;
         font-family: fonts.$Josefin-Sans;
@@ -166,6 +181,16 @@
             @media screen and (min-width: 600px) {
                 font-size: 1em;
             }
+
+            #{ $self }--dark & {
+                color: colors.$Dark-Grayish-Blue-b;
+            }
+        }
+
+        #{ $self }--dark & {
+            background-color: colors.$Very-Dark-Desaturated-Blue;
+
+            color: colors.$Light-Grayish-Blue-b;
         }
     }
 
@@ -179,6 +204,10 @@
 
         @media screen and (min-width: 1024px) {
             margin-bottom: 0;
+        }
+
+        #{ $self }--dark & {
+            box-shadow: 0 10px 16px rgba(colors.$Very-Dark-Blue, 0.15);
         }
     }
 
@@ -194,9 +223,14 @@
         padding: 20px;
 
         background-color: white;
+        transition: background-color 150ms ease-out;
 
         @media screen and (min-width: 600px) {
             padding: 18px 20px;
+        }
+
+        #{ $self }--dark & {
+            background-color: colors.$Very-Dark-Desaturated-Blue;
         }
     }
 
@@ -207,6 +241,10 @@
 
         @media screen and (min-width: 600px) {
             font-size: 0.8em;
+        }
+
+        #{ $self }--dark & {
+            color: colors.$Very-Dark-Grayish-Blue-a;
         }
     }
 
@@ -222,6 +260,18 @@
         @media screen and (min-width: 600px) {
             font-size: 0.8em;
         }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        #{ $self }--dark & {
+            color: colors.$Very-Dark-Grayish-Blue-a;
+
+            &:hover {
+                color: colors.$Light-Grayish-Blue-hover;
+            }
+        }
     }
 
     // Filtering tools
@@ -236,6 +286,7 @@
         background-color: white;
         border-radius: 5px;
         box-shadow: 0 5px 20px rgba(colors.$Very-Dark-Grayish-Blue, 0.05);
+        transition: background-color 150ms ease-out;
 
         @media screen and (min-width: 1024px) {
             margin: 0 auto 5px auto;
@@ -245,6 +296,10 @@
             transform: translateY(-100%);
             box-shadow: none;
         }
+
+        #{ $self }--dark & {
+            background-color: colors.$Very-Dark-Desaturated-Blue;
+        }
     }
 
     &__tool {
@@ -252,6 +307,10 @@
 
         &:nth-child(2) {
             margin: 0 20px;
+        }
+
+        &:hover {
+            cursor: pointer;
         }
     }
 
@@ -269,6 +328,15 @@
         font-size: 0.9em;
         font-weight: 700;
         color: colors.$Dark-Grayish-Blue-a;
+
+        #{ $self }--dark & {
+            color: colors.$Very-Dark-Grayish-Blue-a;
+
+            &:hover {
+                color: colors.$Light-Grayish-Blue-hover;
+            }
+        }
+        
     }
 
     // Message
@@ -276,5 +344,9 @@
         text-align: center;
         color: colors.$Dark-Grayish-Blue-a;
         font-size: 0.9em;
+
+        #{ $self }--dark & {
+            color: colors.$Very-Dark-Grayish-Blue-a;
+        }
     }
 }
