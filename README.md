@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [solution]()
-- Live Site URL: [live-preview]()
+- Live Site URL: [live-preview](https://quirky-easley-e8a83b.netlify.app/)
 
 ## My process
 
@@ -52,6 +52,7 @@ Users should be able to:
 - [babel](https://babeljs.io/)
 - [TypeScript](https://www.typescriptlang.org/) -- for app logic
 - [Vite](https://vitejs.dev/)
+- [interact.js](https://interactjs.io/) -- reordering list
 
 ### What I learned
 
