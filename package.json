@@ -10,13 +10,6 @@
         "build": "tsc && vite build",
         "serve": "vite preview"
     },
-    "jest": {
-        "transform": {
-            "^.+\\.[t|j]sx?$": "babel-jest"
-        },
-        "verbose": true,
-        "testEnvironment": "jsdom"
-    },
     "devDependencies": {
         "@babel/core": "^7.15.0",
         "@babel/preset-env": "^7.15.0",
