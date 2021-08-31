@@ -48,7 +48,7 @@ for (let t in exampleTodos) {
     renderTodos(filtering(currentFilter, todos), todosContainer);
 }
 
-updateItemsLeft(itemsLeft, todos.length);
+updateItemsLeft(itemsLeft, filtering("active", todos).length);
 
 // === InteractJS ===
 
@@ -95,7 +95,7 @@ newTodoText.addEventListener("keyup", function (e): void {
     if (e.key === "Enter") {
         createTodo(todos, newTodoIsComplete.checked, newTodoText.value, ++id);
         newTodoText.value = "";
-        updateItemsLeft(itemsLeft, todos.length);
+        updateItemsLeft(itemsLeft, filtering("active", todos).length);
         renderTodos(filtering(currentFilter, todos), todosContainer);
     }
 });
@@ -108,7 +108,7 @@ todosContainer.addEventListener("click", function (e): void {
         let todoId: number = parseInt(parentTodo.id);
         let filteredTodos: Array<Todo> = removeTodo(todos, todoId);
         todos = filteredTodos;
-        updateItemsLeft(itemsLeft, todos.length);
+        updateItemsLeft(itemsLeft, filtering("active", todos).length);
         renderTodos(filtering(currentFilter, todos), todosContainer);
 
         // If todos container is empty, reset id variable
@@ -119,8 +119,10 @@ todosContainer.addEventListener("click", function (e): void {
 // Marking todos
 todosContainer.addEventListener("input", function (e): void {
     let clicked: HTMLInputElement = e.target as HTMLInputElement;
-    let todoToFind = findTodo(todos, parseInt(clicked.id));
+    let parentTodo: HTMLElement = clicked.parentElement?.parentElement?.parentElement as HTMLElement;
+    let todoToFind = findTodo(todos, parseInt(parentTodo.id));
     todoToFind.setIsComplete = clicked.checked;
+    updateItemsLeft(itemsLeft, filtering("active", todos).length);
     renderTodos(filtering(currentFilter, todos), todosContainer);
 });
 
@@ -128,7 +130,6 @@ todosContainer.addEventListener("input", function (e): void {
 clearButton.addEventListener("click", function (): void {
     let filteredTodos: Array<Todo> = filtering("active", todos);
     todos = filteredTodos;
-    updateItemsLeft(itemsLeft, todos.length);
     renderTodos(filtering(currentFilter, todos), todosContainer);
 });
 
