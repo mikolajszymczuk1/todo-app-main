@@ -2,4 +2,4 @@
 import "./theme-changer";
 
 // Main app
-import "./app";
+import "./app/app";
