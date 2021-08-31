@@ -212,7 +212,14 @@
     }
 
     // Todos container
-    // &__todos-container {}
+    &__todos-container {
+        background-color: white;
+        transition: background-color 150ms ease-out;
+
+        #{ $self }--dark & {
+            background-color: colors.$Very-Dark-Desaturated-Blue;
+        }
+    }
 
     // Under todos
     &__under-todos {
@@ -341,6 +348,8 @@
 
     // Message
     &__message {
+        margin-bottom: 40px;
+
         text-align: center;
         color: colors.$Dark-Grayish-Blue-a;
         font-size: 0.9em;
