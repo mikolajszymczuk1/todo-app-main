@@ -30,5 +30,8 @@
         "vite": "^2.5.1",
         "vite-plugin-html": "^2.1.0",
         "vite-plugin-live-reload": "^2.1.0"
+    },
+    "dependencies": {
+        "interactjs": "^1.8.3"
     }
 }
