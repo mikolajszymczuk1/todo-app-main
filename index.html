@@ -48,7 +48,7 @@
                     <!-- Gradient checkbox component -->
                     <div class="iscomplete">
                         <label class="iscomplete__label">
-                            <input class="iscomplete__checkbox" type="checkbox">
+                            <input id="new-todo-is-complete" class="iscomplete__checkbox" type="checkbox">
                             <span class="iscomplete__custom-checkbox">
                                 <img class="iscomplete__custom-checkbox-icon" src="/src/svg/icon-check.svg" alt="Check icon image" title="Check">
                             </span>
@@ -63,114 +63,11 @@
                 <!-- Wrapper for todos container and under todos -->
                 <div class="todo-app__wrapper">
                     <!-- Todos container -->
-                    <div class="todo-app__todos-container">
-                        <!-- Single todo -->
-                        <div class="todo todo--completed">
-                            <div class="iscomplete">
-                                <label class="iscomplete__label">
-                                    <input class="iscomplete__checkbox" type="checkbox">
-                                    <span class="iscomplete__custom-checkbox">
-                                        <img class="iscomplete__custom-checkbox-icon" src="/src/svg/icon-check.svg" alt="Check icon image" title="Check">
-                                    </span>
-                                </label>
-                            </div>
-                            
-                            <h2 class="todo__text">Some text</h2>
-
-                            <button class="todo__delete-button">
-                                <img class="todo__delete-icon" src="/src/svg/icon-cross.svg" alt="Cross icon image" title="Cross">
-                            </button>
-                        </div>
-
-                        <div class="todo">
-                            <div class="iscomplete">
-                                <label class="iscomplete__label">
-                                    <input class="iscomplete__checkbox" type="checkbox">
-                                    <span class="iscomplete__custom-checkbox">
-                                        <img class="iscomplete__custom-checkbox-icon" src="/src/svg/icon-check.svg" alt="Check icon image" title="Check">
-                                    </span>
-                                </label>
-                            </div>
-                            
-                            <h2 class="todo__text">Some text</h2>
-
-                            <button class="todo__delete-button">
-                                <img class="todo__delete-icon" src="/src/svg/icon-cross.svg" alt="Cross icon image" title="Cross">
-                            </button>
-                        </div>
-
-                        <div class="todo">
-                            <div class="iscomplete">
-                                <label class="iscomplete__label">
-                                    <input class="iscomplete__checkbox" type="checkbox">
-                                    <span class="iscomplete__custom-checkbox">
-                                        <img class="iscomplete__custom-checkbox-icon" src="/src/svg/icon-check.svg" alt="Check icon image" title="Check">
-                                    </span>
-                                </label>
-                            </div>
-                            
-                            <h2 class="todo__text">Some text</h2>
-
-                            <button class="todo__delete-button">
-                                <img class="todo__delete-icon" src="/src/svg/icon-cross.svg" alt="Cross icon image" title="Cross">
-                            </button>
-                        </div>
-
-                        <div class="todo">
-                            <div class="iscomplete">
-                                <label class="iscomplete__label">
-                                    <input class="iscomplete__checkbox" type="checkbox">
-                                    <span class="iscomplete__custom-checkbox">
-                                        <img class="iscomplete__custom-checkbox-icon" src="/src/svg/icon-check.svg" alt="Check icon image" title="Check">
-                                    </span>
-                                </label>
-                            </div>
-                            
-                            <h2 class="todo__text">Some text</h2>
-
-                            <button class="todo__delete-button">
-                                <img class="todo__delete-icon" src="/src/svg/icon-cross.svg" alt="Cross icon image" title="Cross">
-                            </button>
-                        </div>
-
-                        <div class="todo">
-                            <div class="iscomplete">
-                                <label class="iscomplete__label">
-                                    <input class="iscomplete__checkbox" type="checkbox">
-                                    <span class="iscomplete__custom-checkbox">
-                                        <img class="iscomplete__custom-checkbox-icon" src="/src/svg/icon-check.svg" alt="Check icon image" title="Check">
-                                    </span>
-                                </label>
-                            </div>
-                            
-                            <h2 class="todo__text">Some text</h2>
-
-                            <button class="todo__delete-button">
-                                <img class="todo__delete-icon" src="/src/svg/icon-cross.svg" alt="Cross icon image" title="Cross">
-                            </button>
-                        </div>
-
-                        <div class="todo">
-                            <div class="iscomplete">
-                                <label class="iscomplete__label">
-                                    <input class="iscomplete__checkbox" type="checkbox">
-                                    <span class="iscomplete__custom-checkbox">
-                                        <img class="iscomplete__custom-checkbox-icon" src="/src/svg/icon-check.svg" alt="Check icon image" title="Check">
-                                    </span>
-                                </label>
-                            </div>
-                            
-                            <h2 class="todo__text">Complete Todo App on Frontend Mentor</h2>
-
-                            <button class="todo__delete-button">
-                                <img class="todo__delete-icon" src="/src/svg/icon-cross.svg" alt="Cross icon image" title="Cross">
-                            </button>
-                        </div>
-                    </div>
+                    <div class="todo-app__todos-container"></div>
 
                     <!-- Under todos -->
                     <div class="todo-app__under-todos">
-                        <h3 class="todo-app__items-left-text">5 items left</h3>
+                        <h3 class="todo-app__items-left-text">0 items left</h3>
                         <button class="todo-app__clear-completed-button">Clear Completed</button>
                     </div>
                 </div>
