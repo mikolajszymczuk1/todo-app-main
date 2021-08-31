@@ -22,6 +22,10 @@ class Todo {
         return this.isComplete;
     }
 
+    public get getText(): string {
+        return this.text;
+    }
+
     public set setIsComplete(newIsComplete: boolean) {
         this.isComplete = newIsComplete;
     }
