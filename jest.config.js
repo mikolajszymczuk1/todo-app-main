@@ -7,7 +7,7 @@ module.exports = {
     moduleNameMapper: {
         '\\.svg$': '<rootDir>/src/__mocks__/svgrMock.ts',
     },
-    // collectCoverage: true,
+    collectCoverage: true,
     coverageDirectory: "<rootDir>/src/__tests__/coverage"
 
 }
