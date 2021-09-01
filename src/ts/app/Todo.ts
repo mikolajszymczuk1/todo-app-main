@@ -35,7 +35,7 @@ class Todo {
             <div class="todo ${ this.isComplete ? "todo--completed" : ""}" id="${ this.id }">
                 <div class="iscomplete">
                     <label class="iscomplete__label">
-                        <input class="iscomplete__checkbox" type="checkbox" ${ this.isComplete ? `checked=""` : `` }>
+                        <input class="iscomplete__checkbox" type="checkbox" ${ this.isComplete ? `checked` : `` }>
                         <span class="iscomplete__custom-checkbox">
                             <img class="iscomplete__custom-checkbox-icon" src="${ checkIcon }" alt="Check icon image" title="Check">
                         </span>
