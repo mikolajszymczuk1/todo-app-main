@@ -8,6 +8,8 @@ module.exports = {
         '\\.svg$': '<rootDir>/src/__mocks__/svgrMock.ts',
     },
     collectCoverage: true,
-    coverageDirectory: "<rootDir>/src/__tests__/coverage"
-
+    coverageDirectory: "<rootDir>/src/__tests__/coverage",
+    testPathIgnorePatterns: [
+        "<rootDir>/src/__tests__/coverage/"
+    ]
 }
